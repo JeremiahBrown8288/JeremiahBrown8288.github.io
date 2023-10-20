@@ -19,7 +19,9 @@
 		}
 		.board{
 			height: 100vh;
-		}
+			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmsTtsWh-WNeOuhC_KpWYejJpGvwxGXk_XMosj8B7-M0humA9a0h-d90mIktsYIdY3Its&usqp=CAU");
+			background-size: 100% auto;
+  		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -65,6 +67,11 @@
 			var positionX= 0;
 			var points = 0;
 			var speed = 10;
+			var positionyY;
+			var speedY; 
+			var randNum = Math.random() * 100;
+			var colorStr = "rgb(50, 25, 250)";
+			box.css
 			
 
 			
@@ -95,7 +102,13 @@
 				positionX = 0 ; 
 				points = points+1;
 				changeBoxText(points);
-				speed = 3;
+			
+				if (speed>0){
+					speed += 3;
+				}
+				if (speed<0){
+					speed -= 3;
+				}
 
 
 			};
