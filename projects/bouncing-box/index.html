@@ -6,9 +6,9 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: teal;
+			width: 80px;
+			height: 80px;
+			background-color: rgb(217, 255, 0);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -72,6 +72,8 @@
 			var randNum = Math.random() * 100;
 			var colorStr = "rgb(50, 25, 250)";
 			box.css
+			var positionY;
+			var speedY
 			
 
 			
@@ -101,13 +103,13 @@
 			function handleBoxClick() {
 				positionX = 0 ; 
 				points = points+1;
-				changeBoxText(points);
+				changeBoxText(points)
 			
 				if (speed>0){
-					speed += 3;
+					speed += 10;
 				}
 				if (speed<0){
-					speed -= 3;
+					speed -= 10;
 				}
 
 
